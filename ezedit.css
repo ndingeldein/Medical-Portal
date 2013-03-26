@@ -1,0 +1,39 @@
+.logo{
+
+	color: #000;
+	font-size: 36px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 600;
+
+}
+
+.ezedit_body {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;	
+	padding: 5px 5px 5px 5px;
+	margin: 0px;
+	border-style: none;
+	/*background-color: #ffffff;*/
+	color: #000000;
+	font-size: 14px;
+	line-height: 20px;
+}
+.important {
+	font-family: "Open Sans", sans-serif;
+	color: #FF0000;
+	line-height: 20px;
+}
+.heading {
+	font-family: "Open Sans", sans-serif;
+	color:#000000;
+	line-height: 20px;
+	font-size: 26px;
+	text-transform: uppercase;
+}
+.sub_heading {
+	font-family: "Open Sans", sans-serif;
+	color:#999;
+	line-height: 20px;
+	font-size: 16px;
+}
