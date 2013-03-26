@@ -58,7 +58,7 @@
 <link href="./css/normalize.min.css" rel="stylesheet" type="text/css" />
 <link href="./css/html5bp.css" rel="stylesheet" type="text/css" />
 <link href="./css/main.css" rel="stylesheet" type="text/css" />
-<link href="./ezedit.css" rel="stylesheet" type="text/css" />
+<link href="./css/ezedit.css" rel="stylesheet" type="text/css" />
 
 <script src="./js/vendor/modernizr-2.6.1.min.js"></script>
 <script src="./js/vendor/jquery-1.8.2.min.js"></script>
