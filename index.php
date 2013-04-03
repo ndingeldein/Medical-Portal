@@ -31,7 +31,7 @@
 	$category_id = url_get_param($_SERVER['REQUEST_URI'], 'cid');
 	
 	if(!is_numeric($category_id) || !strlen($category_id)){
-		$category_id = '5716';
+		$category_id = '5725';
 	}
 
 	$cat_images = get_category_images($category_id);
@@ -41,6 +41,15 @@
 
 	$watermark = get_cat_image($cat_images, 'filename', 'watermark.png');
 	$watermark_url = get_image_url($watermark);
+
+	$logo_image = get_cat_image($cat_images, 'filename', 'logo.png');
+	$color1 = (strlen($logo_image['field02'])) ? '#' . $logo_image['field02'] : '#333';	
+	$color2 = (strlen($logo_image['field03'])) ? '#' . $logo_image['field03'] : '#FFF';
+
+	$buttonColor1 = adjustBrightness($color1, 180);
+	$buttonColor2 = adjustBrightness($color1, 90);
+	$buttonColor3 = adjustBrightness($color1, 70);
+	$buttonColor4 = adjustBrightness($color1, 20);
 
  ?>	 
 
@@ -67,7 +76,39 @@
 
 
 <style>
-	
+
+/*These styles use the hex colors from the manager in fields 2 and 3 of logo gallery item*/
+div.footer-wrapper{
+
+	background-color: <?php echo $color1; ?>;
+	color: <?php echo $color2; ?>;
+
+}
+
+div.content{
+
+	border: 1px solid <?php echo $color1; ?>;
+
+}
+
+#button{
+
+	border: 1px solid <?php echo $color1; ?>;
+
+	background: <?php echo $buttonColor1; ?>; /* Old browsers */
+	background: -moz-linear-gradient(top,  <?php echo $buttonColor1; ?> 0%, <?php echo $buttonColor2; ?> 6%, <?php echo $buttonColor3; ?> 48%, <?php echo $buttonColor4; ?> 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php echo $buttonColor1; ?>), color-stop(6%,<?php echo $buttonColor2; ?>), color-stop(48%,<?php echo $buttonColor3; ?>), color-stop(100%,<?php echo $buttonColor4; ?>)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  <?php echo $buttonColor1; ?> 0%,<?php echo $buttonColor2; ?> 6%,<?php echo $buttonColor3; ?> 48%,<?php echo $buttonColor4; ?> 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  <?php echo $buttonColor1; ?> 0%,<?php echo $buttonColor2; ?> 6%,<?php echo $buttonColor3; ?> 48%,<?php echo $buttonColor4; ?> 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  <?php echo $buttonColor1; ?> 0%,<?php echo $buttonColor2; ?> 6%,<?php echo $buttonColor3; ?> 48%,<?php echo $buttonColor4; ?> 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  <?php echo $buttonColor1; ?> 0%,<?php echo $buttonColor2; ?> 6%,<?php echo $buttonColor3; ?> 48%,<?php echo $buttonColor4; ?> 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $buttonColor1; ?>', endColorstr='<?php echo $buttonColor4; ?>',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+/*END of color styles*/
+
 .bg{
 	
 	position: absolute;

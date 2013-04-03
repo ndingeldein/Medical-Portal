@@ -51,8 +51,6 @@ div.content{
 	font-size: 13px;
 	line-height: 1.5em;
 
-	border: 1px solid #a9a9a9;
-
 }
 
 p.blurb{
@@ -68,23 +66,14 @@ p.blurb{
 	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
 	font-size: 23px;
 	
-	font-weight: 600;
-	
-	background: #efefef; /* Old browsers */
-background: -moz-linear-gradient(top,  #efefef 0%, #d4d4d4 6%, #cbcbcb 48%, #aeaeae 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(6%,#d4d4d4), color-stop(48%,#cbcbcb), color-stop(100%,#aeaeae)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #efefef 0%,#d4d4d4 6%,#cbcbcb 48%,#aeaeae 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #efefef 0%,#d4d4d4 6%,#cbcbcb 48%,#aeaeae 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #efefef 0%,#d4d4d4 6%,#cbcbcb 48%,#aeaeae 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #efefef 0%,#d4d4d4 6%,#cbcbcb 48%,#aeaeae 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#aeaeae',GradientType=0 ); /* IE6-9 */
+	font-weight: 600;	
 
 	color: #FFF;
 
 	-webkit-border-radius: 6px;
 	border-radius: 3px;
 
-	border: 1px solid #acacac;
+	
 
 	text-shadow: 1px 1px 1px #707070; /* Chrome, Firefox 3.5+, IE 10+, Opera 9+, Safari 1+ */
 
@@ -118,17 +107,20 @@ hr.content-divider {
     margin: 28px 0; padding: 0;
 }
 
-div.footer-wrapper{
+div.footer-wrapper a:link, div.footer-wrapper a:hover, div.footer-wrapper a:visited,
+div.footer-wrapper a:active{
+	color: inherit;
+}
 
+div.footer-wrapper{
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	z-index: 999;
 	width: 100%;
 	height: 44px;
-	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0,0.8);
-
+	color: inherit;
+	
 }
 
 div.footer{
@@ -141,7 +133,8 @@ div.footer{
 
 div.copy{
 
-	color: #626262;
+	color: inherit;
+	opacity: 0.65;
 	font-size: 10px;
 	line-height: 13px;
 	position: absolute;
@@ -169,7 +162,6 @@ div.copy{
 	float: left;	
 	font-size: 18px;
 	
-	color: #FFF;
 	font-weight: normal;
 	margin-top: 10px;
 	margin-right: 24px;
@@ -179,7 +171,7 @@ div.copy{
 	display: block;
 	float: left;	
 	font-size: 12px;	
-	color: #FFF;
+	
 	font-weight: normal;
 	margin-top: 10px;
 	line-height: 22px;
